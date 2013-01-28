@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+
+require_relative '../lib/sudoku/puzzle'
+require_relative '../lib/sudoku/solver'
+
+puzzle = Sudoku::Puzzle.new
+puzzle.read_csv
+solver = Sudoku::Solver.new( puzzle )
+solver.solve
+puzzle.write_csv
+
